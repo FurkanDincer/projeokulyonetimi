@@ -1,6 +1,7 @@
 public class Kisi {
     private String isim;
     private String soyad;
+
     private String kimlikNo;
     private int yas;
 
@@ -43,16 +44,19 @@ public class Kisi {
     }
 
     public void setYas(int yas) {
-        this.yas = yas;
+        if (!(yas<0)) {
+            this.yas = yas;
+        }
     }
+
 
     @Override
     public String toString() {
-        return "Kisi{" +
-                "isim='" + isim + '\'' +
-                ", soyad='" + soyad + '\'' +
-                ", kimlikNo='" + kimlikNo + '\'' +
-                ", yas=" + yas +
+        return "Kisi {" +
+                "isim:'" + isim + '\'' +
+                ", soyad:'" + soyad + '\'' +
+                ", kimlikNo:'" + kimlikNo + '\'' +
+                ", yas:" + yas +
                 '}';
     }
 }
